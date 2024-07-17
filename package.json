@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@preline/collapse": "^2.3.0",
     "gsap": "^3.12.5",
     "motion": "^10.18.0",
     "next": "^14.2.5",
