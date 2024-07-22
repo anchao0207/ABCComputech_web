@@ -1,4 +1,3 @@
-
 function CarouselInfo({ header, desc }: { header: string; desc: string }) {
   return (
     <div className="hs-carousel-slide">
@@ -11,7 +10,7 @@ function CarouselInfo({ header, desc }: { header: string; desc: string }) {
             </div>
             <button
               type="button"
-              className="w-fit py-3 px-20 inline-flex items-center gap-x-2 text-base font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400"
+              className="w-fit py-3 px-20 inline-flex items-center gap-x-2 text-base font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none transition duration-300 ease-in-out dark:hover:bg-blue-900 dark:text-blue-400"
             >
               Read More
             </button>
@@ -27,13 +26,59 @@ function CarouselForm() {
   return (
     <div>
       <form action="#">
-      <div>
-    <div className="sm:flex rounded-lg shadow-sm">
-      <span className="py-3 px-4 inline-flex items-center min-w-fit w-full border-r-2 border-gray-200 bg-gray-50 text-sm text-gray-500 -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:w-auto sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg dark:bg-neutral-700 dark:border-neutral-700 dark:text-neutral-400">First and last name</span>
-      <input type="text" className="py-3 px-4 pe-11 block w-full border-r-2 border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"/>
-      <input type="text" className="py-3 px-4 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"/>
-    </div>
-  </div>
+        <div className="w-3/4 bg-black bg-gradient-to-br from-black to-zinc-300 bg-opacity-50 p-5 rounded-lg">
+          <div className="flex flex-col gap-5">
+            <div className="text-white text-2xl">
+              Take Advantage of a Free Business IT Evaluation and Consultation
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex rounded-lg shadow-sm">
+                <span className="px-4 inline-flex items-center min-w-fit rounded-s-md border border-e-2 border-gray-200 bg-gray-50 text-sm text-gray-500 dark:bg-neutral-700 dark:border-neutral-700 dark:text-neutral-400">
+                  First name
+                </span>
+                <input
+                  type="text"
+                  className="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm rounded-e-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                />
+              </div>
+              <div className="flex rounded-lg shadow-sm">
+                <span className="px-4 inline-flex items-center min-w-fit rounded-s-md border border-e-2 border-gray-200 bg-gray-50 text-sm text-gray-500 dark:bg-neutral-700 dark:border-neutral-700 dark:text-neutral-400">
+                  Last name
+                </span>
+                <input
+                  type="text"
+                  className="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm rounded-e-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex rounded-lg shadow-sm">
+                <span className="px-4 inline-flex items-center min-w-fit rounded-s-md border border-e-2 border-gray-200 bg-gray-50 text-sm text-gray-500 dark:bg-neutral-700 dark:border-neutral-700 dark:text-neutral-400">
+                  Email
+                </span>
+                <input
+                  type="text"
+                  className="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm rounded-e-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                />
+              </div>
+              <div className="flex rounded-lg shadow-sm">
+                <span className="px-4 inline-flex items-center min-w-fit rounded-s-md border border-e-2 border-gray-200 bg-gray-50 text-sm text-gray-500 dark:bg-neutral-700 dark:border-neutral-700 dark:text-neutral-400">
+                  Phone
+                </span>
+                <input
+                  type="text"
+                  className="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm rounded-e-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                />
+              </div>
+            </div>
+            <button
+              type="button"
+              className="py-3 px-20 inline-flex justify-center items-center gap-x-2 text-base font-semibold rounded-lg border border-transparent bg-blue-800 text-white hover:bg-blue-500 transition duration-300 ease-in-out disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );
@@ -68,7 +113,7 @@ export default function LandingCarousel() {
 
       <button
         type="button"
-        className="hs-carousel-prev hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-cyan-300 hover:bg-cyan-500/20 hover:text-gray-800 rounded-e-lg dark:text-white dark:hover:bg-white/10"
+        className="hs-carousel-prev hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-cyan-300 hover:bg-cyan-500/20 hover:text-gray-800 rounded-e-lg transition duration-300 ease-in-out dark:text-white dark:hover:bg-white/10"
       >
         <span className="text-2xl" aria-hidden="true">
           <svg
@@ -90,7 +135,7 @@ export default function LandingCarousel() {
       </button>
       <button
         type="button"
-        className="hs-carousel-next hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-cyan-300 hover:bg-cyan-500/20 hover:text-gray-800 rounded-e-lg dark:text-white dark:hover:bg-white/10"
+        className="hs-carousel-next hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-cyan-300 hover:bg-cyan-500/20 hover:text-gray-800 rounded-e-lg transition duration-300 ease-in-out dark:text-white dark:hover:bg-white/10"
       >
         <span className="sr-only">Next</span>
         <span className="text-2xl" aria-hidden="true">
