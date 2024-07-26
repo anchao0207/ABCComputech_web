@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function NavBar() {
   return (
     <nav
-      className="container w-full p-5 md:flex md:items-center md:justify-between"
+      className="w-full my-5 px-5 md:px-10 md:flex md:items-center md:justify-between"
       aria-label="Global"
     >
-      <div className="w-full flex items-center justify-between">
+      <div className="w-fit flex items-center justify-between">
         <Image
           src="/computechicon.png"
           alt="Computech Logo"
@@ -61,7 +61,7 @@ export default function NavBar() {
 
       <div
         id="navbar-with-mega-menu"
-        className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block text-sm text-blue-900 lg:text-base xl:text-lg "
+        className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block text-base text-blue-900 lg:text-lg xl:text-xl "
       >
         <div className="flex flex-col gap-5 mt-5 md:flex-row md:items-center md:justify-end md:mt-0 md:ps-5">
           <Link href="#" className="p-2 hover:text-blue-500">
