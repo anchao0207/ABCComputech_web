@@ -4,6 +4,8 @@ import LandingCarousel from "@components/components/LandingCarousel";
 import LandingServices from "@components/components/LandingServices";
 import LandingAbout from "@components/components/LandingAbout";
 import LandingManage from "@components/components/LandingManage";
+import SoftwareDevelpoment from "@components/components/SoftwareDevelopment";
+import Footer from "@components/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
         <LandingServices />
         <LandingAbout></LandingAbout>
         <LandingManage></LandingManage>
+        <SoftwareDevelpoment/>
+        <Footer></Footer>
       </section>
     </main>
   );

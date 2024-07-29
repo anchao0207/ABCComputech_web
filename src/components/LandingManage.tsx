@@ -1,11 +1,12 @@
-function Card() {
+function Card({ title, desc }: { title: string; desc: string }) {
   return (
-    <div className="flex flex-col bg-white border shadow-sm rounded-xl p-4 md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
-      <h3 className="text-base lg:text-lg font-bold text-gray-800 dark:text-white">Email</h3>
-      <p className="mt-2 text-gray-500 dark:text-neutral-400">
-        No more hosting your Exchange in your server room, move email to the
-        cloud.
-      </p>
+    <div className="flex flex-col justify-between bg-white border shadow-sm rounded-xl p-4 md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+      <div>
+        <h3 className="text-base lg:text-lg font-bold text-gray-800 dark:text-white">
+          {title}
+        </h3>
+        <p className="mt-2 text-gray-500 dark:text-neutral-400">{desc}</p>
+      </div>
       <a
         className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-none focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600"
         href="#"
@@ -19,9 +20,9 @@ function Card() {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path d="m9 18 6-6-6-6"></path>
         </svg>
@@ -51,10 +52,22 @@ export default function LandingManage() {
         </p>
       </div>
       <div className="flex flex-col sm:grid grid-cols-2 lg:grid-cols-4 w-full gap-5">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card
+          title="Email"
+          desc="No more hosting your Exchange in your server room, move email to the cloud."
+        />
+        <Card
+          title="Backup"
+          desc="Backup and disaster recovery services for maximum reliability."
+        />
+        <Card
+          title="Servers"
+          desc="Many businesses no longer need servers in their office. Does yours?"
+        />
+        <Card
+          title="Managed"
+          desc="Managed private clouds bring the best of the cloud and on-premises together."
+        />
       </div>
     </div>
   );

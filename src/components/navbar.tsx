@@ -7,7 +7,7 @@ export default function NavBar() {
       className="w-full my-5 px-5 md:px-10 md:flex md:items-center md:justify-between"
       aria-label="Global"
     >
-      <div className="w-fit flex items-center justify-between">
+      <div className="w-full flex items-center justify-between">
         <Image
           src="/computechicon.png"
           alt="Computech Logo"
