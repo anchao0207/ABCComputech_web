@@ -5,7 +5,9 @@ import LandingServices from "@components/components/LandingServices";
 import LandingAbout from "@components/components/LandingAbout";
 import LandingManage from "@components/components/LandingManage";
 import SoftwareDevelpoment from "@components/components/SoftwareDevelopment";
+import Clients from "@components/components/Clients";
 import Footer from "@components/components/Footer";
+import Reviews from "@components/components/Reviews";
 
 export default function Home() {
   return (
@@ -15,8 +17,10 @@ export default function Home() {
         <LandingCarousel></LandingCarousel>
         <LandingServices />
         <LandingAbout></LandingAbout>
+        <Reviews/>
         <LandingManage></LandingManage>
         <SoftwareDevelpoment/>
+        <Clients></Clients>
         <Footer></Footer>
       </section>
     </main>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+    <footer className="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto border-t border-gray-800 dark:border-neutral-700">
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
         <div className="col-span-full hidden lg:col-span-1 lg:block">
           {/* <a className="flex-none font-semibold text-3xl text-black focus:outline-none focus:opacity-80 dark:text-white" href="#" aria-label="Brand">Computech</a> */}
