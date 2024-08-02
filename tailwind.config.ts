@@ -39,6 +39,11 @@ const config: Config = {
           },
         },
       },
+      transitionProperty: {
+        'width' : 'width',
+        'height': 'height',
+        'spacing': 'margin, padding',
+      }
     },
     
   },

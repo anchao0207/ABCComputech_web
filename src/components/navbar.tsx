@@ -1,13 +1,37 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
+  const [clientWindowHeight, setClientWindowHeight] = useState(0);
+  const [aninav, setAninav] = useState('')
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
+  const handleScroll = () => {
+    setClientWindowHeight(window.scrollY);
+  };
+
+  useEffect(() => {
+    console.log(clientWindowHeight)
+    if (clientWindowHeight > 100) {
+      setAninav('rounded-3xl md:rounded-full w-4/5 top-5')
+    } else {
+      setAninav('rounded-none w-full')
+    }
+  }, [clientWindowHeight]);
+
   return (
     <nav
-      className="w-full my-5 px-5 md:px-10 md:flex md:items-center md:justify-between"
+      className={`sticky w-full px-10 top-0 py-5 md:flex md:items-center md:justify-between z-20 bg-white ${aninav} transition-all ease-in-out duration-300 `}
       aria-label="Global"
     >
-      <div className="w-full flex items-center justify-between">
+      <div className=" flex items-center justify-between">
         <Image
           src="/computechicon.png"
           alt="Computech Logo"
@@ -71,7 +95,7 @@ export default function NavBar() {
             About
           </Link>
 
-          <div className="hidden md:inline-flex hs-dropdown relative">
+          <div className="hidden md:inline-flex justify-center hs-dropdown relative [--is-collapse:true]">
             <button
               type="button"
               className="md:hs-dropdown-toggle p-2 inline-flex items-center gap-x-2 disabled:pointer-events-none hover:text-blue-500"
@@ -93,45 +117,53 @@ export default function NavBar() {
               </svg>
             </button>
 
-            <div className="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-10 mt-2 min-w-60 bg-white shadow-md rounded-lg p-2">
-              <Link
-                className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
-                href="#"
-              >
-                Managed IT Cloud
-              </Link>
-              <Link
-                className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
-                href="#"
-              >
-                IT Consultation
-              </Link>
-              <Link
-                className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
-                href="#"
-              >
-                Microsoft Office 365
-              </Link>
-              <Link
-                className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
-                href="#"
-              >
-                G-Suite
-              </Link>
-              <Link
-                className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
-                href="#"
-              >
-                Cyber Security
-              </Link>
-              <Link
-                className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
-                href="#"
-              >
-                Cio Services
-              </Link>
+            <div className="hs-dropdown-menu transition-all duration hs-dropdown-open:opacity-100 opacity-0 w-full  hidden z-10 min-w-60 bg-none rounded-lg p-2">
+              <div className="top-0 flex justify-center bg-none items-start w-full h-[100vh] before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-full before:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgb(0,0,0,0.8)_100%)] before:content-['']">
+                <div className="columns-3 rounded-lg p-5 bg-white shadow-md z-10">
+                  <Link
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
+                    href="#"
+                  >
+                    Managed IT Cloud
+                  </Link>
+                  <Link
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
+                    href="#"
+                  >
+                    IT Consultation
+                  </Link>
+                  <Link
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
+                    href="#"
+                  >
+                    Microsoft Office 365
+                  </Link>
+                  <Link
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
+                    href="#"
+                  >
+                    G-Suite
+                  </Link>
+                  <Link
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
+                    href="#"
+                  >
+                    Cyber Security
+                  </Link>
+                  <Link
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
+                    href="#"
+                  >
+                    Cio Services
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
+
+          <Link href="#" className="p-2 text-nowrap hover:text-blue-500">
+            Contact Us
+          </Link>
 
           <div className="md:hidden p-2">
             <button
@@ -202,9 +234,7 @@ export default function NavBar() {
             </div>
           </div>
 
-          <Link href="#" className="p-2 text-nowrap hover:text-blue-500">
-            Contact Us
-          </Link>
+          
         </div>
       </div>
     </nav>

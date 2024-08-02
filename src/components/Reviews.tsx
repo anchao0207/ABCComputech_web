@@ -14,7 +14,7 @@ function Card({ className }: { className: string }) {
             <h3 className="sm:text-xl lg:text-4xl font-bold text-gray-800 dark:text-white">
               Patrice Mills CPA
             </h3>
-            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-x-3">
+            <div className="flex flex-col justify-between gap-x-3">
               <div className="flex items-center gap-x-2">
                 <h4 className="font-semibold text-gray-800 dark:text-white">
                   5.0
@@ -73,9 +73,9 @@ function Card({ className }: { className: string }) {
                   </svg>
                 </div>
               </div>
-                <span className="inline-flex items-center gap-x-1 text-base text-blue-600 decoration-2 hover:underline font-medium">
-                  2 weeks ago
-                </span>
+              <span className="inline-flex items-center gap-x-1 text-base text-blue-600 decoration-2 hover:underline font-medium">
+                2 weeks ago
+              </span>
             </div>
           </div>
         </div>
@@ -92,15 +92,15 @@ function Card({ className }: { className: string }) {
 }
 export default function Reviews() {
   return (
-    <div className="flex flex-col md:flex-row w-full justify-center items-center align-middle py-10 px-10 sm:px-20">
-      <div className="m-10 text-center w-4/5 text-4xl font-bold">
+    <div className="flex flex-col md:flex-row w-full gap-10 justify-center items-center align-middle py-10 px-10 sm:px-20">
+      <div className="text-center w-2/5 text-4xl font-bold z-0">
         What people said about us
       </div>
-      <div className="relative flex flex-col w-full justify-center items-center">
-        <Card className="-rotate-1 z-30" />
-        <Card className="hidden lg:block -rotate-3 z-20"/>
-        <Card className="hidden lg:block rotate-1 z-10 "/>
-        <Card className="rotate-3 z-0  "/>
+      <div className="relative card-group lg:columns-2 w-full justify-center items-center group *:transition *:duration-300 *:ease-in-out">
+        <Card className="relative card -rotate-1 hover:scale-110 hover:z-10" />
+        <Card className="relative card hidden lg:block -rotate-3 hover:scale-110 hover:z-10" />
+        <Card className="relative card hidden lg:block rotate-1 hover:scale-110 hover:z-10" />
+        <Card className="relative card rotate-3 hover:scale-110 hover:z-10" />
       </div>
     </div>
   );
