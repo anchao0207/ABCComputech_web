@@ -79,9 +79,9 @@ export default function LandingCarousel() {
     <div
       data-hs-carousel='{
             "loadingClasses": "opacity-0",
-            "isAutoPlay": true
+            "isAutoPlay": false
           }'
-      className="relative w-full"
+      className='relative w-full'
     >
       <div className="hs-carousel relative overflow-hidden w-full bg-white rounded-lg">
         <div className="hs-carousel-body  flex flex-nowrap transition-transform duration-700 opacity-0">

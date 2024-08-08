@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function NavBar() {
   const [clientWindowHeight, setClientWindowHeight] = useState(0);
-  const [aninav, setAninav] = useState('')
+  const [aninav, setAninav] = useState('rounded-none w-full')
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -28,10 +28,11 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`sticky w-full px-10 top-0 py-5 md:flex md:items-center md:justify-between z-20 bg-white ${aninav} transition-all ease-in-out duration-300 `}
+      className={`sticky p-3 md:px-10 top-0 py-5 md:flex md:items-center md:justify-between z-20 bg-slate-200 ${aninav} transition-all ease-in-out duration-300 `}
       aria-label="Global"
     >
       <div className=" flex items-center justify-between">
+        <Link href='/'>
         <Image
           src="/computechicon.png"
           alt="Computech Logo"
@@ -39,7 +40,8 @@ export default function NavBar() {
           width={300}
           height={24}
           priority
-        />
+          />
+          </Link>
         <div className="md:hidden">
           <button
             type="button"
@@ -88,10 +90,10 @@ export default function NavBar() {
         className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block text-base text-blue-900 lg:text-lg xl:text-xl "
       >
         <div className="flex flex-col gap-5 mt-5 md:flex-row md:items-center md:justify-end md:mt-0 md:ps-5">
-          <Link href="#" className="p-2 hover:text-blue-500">
+          <Link href="/" className="p-2 hover:text-blue-500">
             Home
           </Link>
-          <Link href="#" className="p-2 hover:text-blue-500">
+          <Link href="/about" className="p-2 hover:text-blue-500">
             About
           </Link>
 

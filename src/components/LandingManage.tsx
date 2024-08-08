@@ -35,7 +35,7 @@ export default function LandingManage() {
   return (
     <div className="flex flex-col p-5 md:p-10 max-w-6xl place-self-center gap-10">
       <div className="flex flex-col w-full justify-center items-center text-balance text-center">
-        <h3 className="text-lg sm:text-xl lg:text-4xl text-balance mt-1 text-gray-800 font-bold">
+        <h3 className="text-4xl text-balance mt-1 text-gray-800 font-bold">
           Manage Cloud Services
         </h3>
         <p className="mt-5 text-sm sm:text-base lg:text-xl text-gray-500 dark:text-neutral-400">
