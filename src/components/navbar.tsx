@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import {motion, Variants} from "framer-motion"
+
 
 export default function NavBar() {
   const [clientWindowHeight, setClientWindowHeight] = useState(0);
@@ -18,8 +20,8 @@ export default function NavBar() {
   };
 
   useEffect(() => {
-    console.log(clientWindowHeight)
-    if (clientWindowHeight > 100) {
+    // console.log(clientWindowHeight)
+    if (clientWindowHeight > 110) {
       setAninav('rounded-3xl md:rounded-full w-4/5 top-5')
     } else {
       setAninav('rounded-none w-full')
@@ -28,7 +30,7 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`sticky p-3 md:px-10 top-0 py-5 md:flex md:items-center md:justify-between z-20 bg-slate-200 ${aninav} transition-all ease-in-out duration-300 `}
+      className={`sticky p-3 md:px-10 top-0 py-5 shadow-lg md:flex md:items-center md:justify-between z-20 bg-slate-200 ${aninav} transition-all ease-in-out duration-300 `}
       aria-label="Global"
     >
       <div className=" flex items-center justify-between">
@@ -96,6 +98,9 @@ export default function NavBar() {
           <Link href="/about" className="p-2 hover:text-blue-500">
             About
           </Link>
+          <Link href="/pricing" className="p-2 hover:text-blue-500">
+            Pricing
+          </Link>
 
           <div className="hidden md:inline-flex justify-center hs-dropdown relative [--is-collapse:true]">
             <button
@@ -121,7 +126,7 @@ export default function NavBar() {
 
             <div className="hs-dropdown-menu transition-all duration hs-dropdown-open:opacity-100 opacity-0 w-full  hidden z-10 min-w-60 bg-none rounded-lg p-2">
               <div className="top-0 flex justify-center bg-none items-start w-full h-[100vh] before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-full before:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgb(0,0,0,0.8)_100%)] before:content-['']">
-                <div className="columns-3 rounded-lg p-5 bg-white shadow-md z-10">
+                <div className="columns-3 rounded-lg p-5 bg-white shadow-[0px_0px_60px_rgba(0,0,0,0.5)] z-10">
                   <Link
                     className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:text-blue-500"
                     href="#"
@@ -174,7 +179,7 @@ export default function NavBar() {
               id="hs-basic-collapse"
               data-hs-collapse="#hs-basic-collapse-heading"
             >
-              Collapse
+              Action
               <svg
                 className=" flex-shrink-0 size-4"
                 xmlns="http://www.w3.org/2000/svg"

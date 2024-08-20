@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Titillium_Web, Comfortaa} from "next/font/google";
 import "./globals.css";
 import PrelineScript from "@components/components/PrelineScript";
 
-
-const inter = Inter({ subsets: ["latin"] });
+const comfortaa = Comfortaa({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"]});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={comfortaa.className}>{children}</body>
       <PrelineScript></PrelineScript>
     </html>
   );

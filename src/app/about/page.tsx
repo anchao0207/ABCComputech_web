@@ -104,13 +104,13 @@ We offer you a variety of IT management plans and solutions that fit with your b
         />
       </div>
       <div className="flex flex-wrap">
-        <div className="p-4 flex flex-col justify-center h-full sm:p-7 md:p-10">
+        <div className="p-4 flex flex-col justify-center h-full sm:p-7 md:p-10 text-pretty">
           <h3 className="text-xl lg:text-3xl font-bold text-gray-800 dark:text-white">
             Here's how you'll benefit from Computech and our business solutions:
           </h3>
         <div className="mt-7 text-sm sm:text-base lg:text-xl text-gray-500 dark:text-neutral-400">
 
-          <ul className="list-disc list-outside px-10 flex flex-col gap-2 text-pretty">
+          <ul className="list-disc list-outside px-10 flex flex-col gap-2">
             <li>
               Save money on products - We only select the very best in software.
             </li>
